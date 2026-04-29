@@ -6,7 +6,7 @@
 /*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:27 by anis              #+#    #+#             */
-/*   Updated: 2026/04/29 21:56:53 by anis             ###   ########.fr       */
+/*   Updated: 2026/04/29 22:30:56 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Contact
 {
-	public:
+	public: // je dois tout mettre en prive ici sinon ca ne passe pas la correction
 		std::string	phone_number;
 		std::string	first_name;
 		std::string	last_name;
