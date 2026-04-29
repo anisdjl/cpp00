@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:51:33 by adjelili          #+#    #+#             */
-/*   Updated: 2026/04/29 13:13:31 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/04/29 21:29:28 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,17 @@ void Contact::init(void)
 		std::getline(std::cin, tmp);
 		this->phone_number.append(tmp);
 	}
+}
+
+std::string	Contact::display_format(std::string str)
+{
+	std::string	tmp;
+
+	if (str.length() > 10)
+	{
+		tmp = str.substr(0, 9);
+		tmp += '.'; // remplace le dernier char
+		return (tmp);
+	}
+	return (str);
 }

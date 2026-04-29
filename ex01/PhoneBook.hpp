@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:27 by anis              #+#    #+#             */
-/*   Updated: 2026/04/29 14:20:00 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/04/29 21:56:53 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Contact
 		std::string	nickname;
 		std::string	darkest_secret;
 		void		init(void);
+		std::string	display_format(std::string str);
 };
 
 class PhoneBook
@@ -37,7 +38,6 @@ class PhoneBook
 		void	display();
 	private:
 		Contact		contact[8];
-		//static int	nb_contact;
 		int			index = 0;
 };
 
