@@ -6,11 +6,43 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:24 by anis              #+#    #+#             */
-/*   Updated: 2026/04/28 15:52:32 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/04/29 13:17:42 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+//int	PhoneBook::nb_contact = 0;
+
+PhoneBook::PhoneBook()
+{
+	std::cout << "Phonebook constructor called" << std::endl;
+	return ;
+}
+
+PhoneBook::~PhoneBook()
+{
+	std::cout << "Phonebook destructor called" << std::endl;
+	return ;
+}
+
+void	PhoneBook::add(void)
+{
+	if (this->index > 7)
+		this->index = 0;
+	this->contact[this->index].init();
+	this->index++;
+}
+
+// void	PhoneBook::display(void)
+// {
+	
+// }
+
+// void	PhoneBook::search(void)
+// {
+		
+// }
 
 int	main(void)
 {
@@ -21,10 +53,20 @@ int	main(void)
 	{
 		std::cout << "Enter an option : ADD | SEARCH | EXIT\n";
 		std::cin >> input;
-		std::cout << input << std::endl;
-		if (input.compare("ADD"))
+		//std::cout << input << std::endl;
+		if (!input.compare("ADD"))
 		{
-			
+			phonebook.add();			
+		}
+		else if (!input.compare("SEARCH"))
+		{
+			std::cout << "im in the search bar\n";
+			return (0);
+		}
+		else if (!input.compare("EXIT"))
+		{
+			std::cout << "im in exit, ciao\n";
+			return (0);
 		}
 	}
 	return (0);	
