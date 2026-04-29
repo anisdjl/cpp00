@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:24 by anis              #+#    #+#             */
-/*   Updated: 2026/04/29 13:17:42 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/04/29 14:52:57 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,14 @@ void	PhoneBook::add(void)
 	this->index++;
 }
 
-// void	PhoneBook::display(void)
-// {
-	
-// }
+void	PhoneBook::display(void)
+{
+	for (int i = 0; i < 8; i++)
+	{
+		std::cout << i;
+		
+	}
+}
 
 // void	PhoneBook::search(void)
 // {
@@ -52,12 +56,10 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "Enter an option : ADD | SEARCH | EXIT\n";
-		std::cin >> input;
+		std::getline(std::cin, input);
 		//std::cout << input << std::endl;
 		if (!input.compare("ADD"))
-		{
 			phonebook.add();			
-		}
 		else if (!input.compare("SEARCH"))
 		{
 			std::cout << "im in the search bar\n";
