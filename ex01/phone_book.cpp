@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:24 by anis              #+#    #+#             */
-/*   Updated: 2026/04/30 10:42:41 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/04/30 10:55:05 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ PhoneBook::~PhoneBook()
 
 void	PhoneBook::add(void)
 {
-	if (this->index > 7)
-		this->index = 0;
-	this->contact[this->index].init();
-	this->index++;
+	if (this->_index > 7)
+		this->_index = 0;
+	this->_contact[this->_index].init();
+	this->_index++;
 }
 
 void	PhoneBook::display(void)
@@ -37,9 +37,9 @@ void	PhoneBook::display(void)
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << std::setw(10) << std::right << i << "|" 
-		<< std::setw(10) << std::right << this->contact[i].display_fname() << "|"
-		<< std::setw(10) << std::right << this->contact[i].display_lname() << "|"
-		<< std::setw(10) << std::right << this->contact[i].display_nname() << "\n";
+		<< std::setw(10) << std::right << this->_contact[i].display_fname() << "|"
+		<< std::setw(10) << std::right << this->_contact[i].display_lname() << "|"
+		<< std::setw(10) << std::right << this->_contact[i].display_nname() << "\n";
 	}
 }
 
@@ -58,13 +58,13 @@ void	PhoneBook::search(void)
 		std::cout << "Wrong input try with a right value\n";
 		this->search();
 	}
-	if (!this->contact[index].is_empty())
+	if (!this->_contact[index].is_empty())
 	{
-		std::cout << "First name: " << this->contact[index].getName()
-		<< "\n" << "Last name: " << this->contact[index].getLname()
-		<< "\n" << "Nickname: " << this->contact[index].getNickname()
-		<< "\n" << "Darkest secret: " << this->contact[index].getSecret()
-		<< "\n" << "Phone number: " << this->contact[index].getPhonenum() << "\n";
+		std::cout << "First name: " << this->_contact[index].getName()
+		<< "\n" << "Last name: " << this->_contact[index].getLname()
+		<< "\n" << "Nickname: " << this->_contact[index].getNickname()
+		<< "\n" << "Darkest secret: " << this->_contact[index].getSecret()
+		<< "\n" << "Phone number: " << this->_contact[index].getPhonenum() << "\n";
 	}
 	else
 		std::cout << "No conatact at this index\n";
