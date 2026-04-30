@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phone_book.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:24 by anis              #+#    #+#             */
-/*   Updated: 2026/04/29 22:15:25 by anis             ###   ########.fr       */
+/*   Updated: 2026/04/30 10:42:41 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	PhoneBook::display(void)
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << std::setw(10) << std::right << i << "|" 
-		<< std::setw(10) << std::right << this->contact[i].display_format(this->contact[i].first_name) << "|"
-		<< std::setw(10) << std::right << this->contact[i].display_format(this->contact[i].last_name) << "|"
-		<< std::setw(10) << std::right << this->contact[i].display_format(this->contact[i].nickname) << "\n";
+		<< std::setw(10) << std::right << this->contact[i].display_fname() << "|"
+		<< std::setw(10) << std::right << this->contact[i].display_lname() << "|"
+		<< std::setw(10) << std::right << this->contact[i].display_nname() << "\n";
 	}
 }
 
@@ -58,18 +58,16 @@ void	PhoneBook::search(void)
 		std::cout << "Wrong input try with a right value\n";
 		this->search();
 	}
-	if (index <= this->index)
+	if (!this->contact[index].is_empty())
 	{
-		std::cout << "First name: " << this->contact[index].first_name
-		<< "\n" << "Last name: " << this->contact[index].last_name
-		<< "\n" << "Nickname: " << this->contact[index].nickname
-		<< "\n" << "Phone number: " << this->contact[index].phone_number << "\n";
+		std::cout << "First name: " << this->contact[index].getName()
+		<< "\n" << "Last name: " << this->contact[index].getLname()
+		<< "\n" << "Nickname: " << this->contact[index].getNickname()
+		<< "\n" << "Darkest secret: " << this->contact[index].getSecret()
+		<< "\n" << "Phone number: " << this->contact[index].getPhonenum() << "\n";
 	}
 	else
-	{
-		std::cout << "No contact at this index, try again\n";
-		this->search();
-	}
+		std::cout << "No conatact at this index\n";
 	return ;
 }
 
