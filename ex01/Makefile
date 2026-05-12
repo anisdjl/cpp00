@@ -6,12 +6,12 @@
 #    By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/25 23:01:23 by anis              #+#    #+#              #
-#    Updated: 2026/04/29 13:18:28 by adjelili         ###   ########.fr        #
+#    Updated: 2026/05/02 15:43:19 by adjelili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = phone_book
 SRC = phone_book.cpp \
       contact.cpp

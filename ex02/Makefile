@@ -6,12 +6,12 @@
 #    By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/30 10:52:11 by adjelili          #+#    #+#              #
-#    Updated: 2026/04/30 18:17:05 by adjelili         ###   ########.fr        #
+#    Updated: 2026/05/02 15:43:25 by adjelili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = bank
 SRC = account.cpp \
 	  tests.cpp
