@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:27 by anis              #+#    #+#             */
-/*   Updated: 2026/04/30 10:54:15 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/13 13:37:27 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Contact
 		std::string	_last_name;
 		std::string	_nickname;
 		std::string	_darkest_secret;
-	public: // je dois tout mettre en prive ici sinon ca ne passe pas la correction
+	public:
 		void		init(void);
 		std::string	display_fname(void);
 		std::string	display_lname(void);
