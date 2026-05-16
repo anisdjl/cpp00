@@ -6,13 +6,13 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:24 by anis              #+#    #+#             */
-/*   Updated: 2026/04/30 10:55:05 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/16 12:41:30 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook()
+PhoneBook::PhoneBook() : _index(0)
 {
 	std::cout << "Phonebook constructor called" << std::endl;
 	return ;

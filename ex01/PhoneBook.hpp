@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:27 by anis              #+#    #+#             */
-/*   Updated: 2026/05/13 13:37:27 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/16 12:41:40 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class PhoneBook
 		void	display();
 	private:
 		Contact		_contact[8];
-		int			_index = 0;
+		int			_index;
 };
 
 #endif
