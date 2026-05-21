@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:51:33 by adjelili          #+#    #+#             */
-/*   Updated: 2026/04/30 10:56:44 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/21 12:24:43 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,35 +20,35 @@ void Contact::init(void)
 	while (this->_first_name.empty())
 	{
 		std::cout << "Enter the first name\n";
-		std::getline(std::cin, tmp);
+		tmp = my_getline();
 		this->_first_name.append(tmp);
 	}
 	this->_last_name.clear();
 	while (this->_last_name.empty())
 	{
 		std::cout << "Enter the last name\n";
-		std::getline(std::cin, tmp);
+		tmp = my_getline();
 		this->_last_name.append(tmp);
 	}
 	this->_nickname.clear();
 	while (this->_nickname.empty())
 	{
 		std::cout << "Enter the nickname\n";
-		std::getline(std::cin, tmp);
+		tmp = my_getline();
 		this->_nickname.append(tmp);
 	}
 	this->_darkest_secret.clear();
 	while (this->_darkest_secret.empty())
 	{
 		std::cout << "Enter the darkest secret\n";
-		std::getline(std::cin, tmp);
+		tmp = my_getline();
 		this->_darkest_secret.append(tmp);
 	}
 	this->_phone_number.clear();
 	while (this->_phone_number.empty())
 	{
 		std::cout << "Enter the phone number\n";
-		std::getline(std::cin, tmp);
+		tmp = my_getline();
 		this->_phone_number.append(tmp);
 	}
 }

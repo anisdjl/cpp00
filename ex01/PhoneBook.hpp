@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:27 by anis              #+#    #+#             */
-/*   Updated: 2026/05/16 12:41:40 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/21 12:25:54 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdio>
 
 class Contact
 {
@@ -49,5 +50,7 @@ class PhoneBook
 		Contact		_contact[8];
 		int			_index;
 };
+
+std::string	my_getline(void);
 
 #endif

@@ -6,11 +6,25 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 23:15:24 by anis              #+#    #+#             */
-/*   Updated: 2026/05/16 12:41:30 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/21 12:25:26 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+std::string	my_getline(void)
+{
+	std::string	return_value;
+
+	std::cin >> return_value;
+	while(std::cin.eof())
+	{
+		std::cin.clear();
+		freopen("/dev/tty", "r", stdin);
+		std::cin >> return_value;
+	}
+	return (return_value);
+}
 
 PhoneBook::PhoneBook() : _index(0)
 {
@@ -50,7 +64,7 @@ void	PhoneBook::search(void)
 
 	this->display();
 	std::cout << "Enter the index of the contact you want to display\n";
-	std::getline(std::cin, tmp);
+	tmp = my_getline();
 	if (tmp.length() == 1 && (tmp[0] >= '0' && tmp[0] <= '7'))
 		index = tmp[0] - '0';
 	else
@@ -79,7 +93,7 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "Enter an option : ADD | SEARCH | EXIT\n";
-		std::getline(std::cin, input);
+		input = my_getline();
 		if (!input.compare("ADD"))
 			phonebook.add();			
 		else if (!input.compare("SEARCH"))
